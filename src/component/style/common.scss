@@ -1,0 +1,39 @@
+@import './color.scss';
+
+.common_InputFeild {
+
+  position: relative;
+
+  & input::-webkit-outer-spin-button,
+  & input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  & .eye-icon {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    color: $red;
+    cursor: pointer;
+    &.active {
+      color: $Black;
+    }
+  }
+}
+
+.table_button_edit{
+    background-color: transparent;
+    border: none;
+}
+
+.userListing {
+    font-weight: 600;
+    font-size: 29px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: $red;
+    text-decoration: underline;
+}

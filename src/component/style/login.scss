@@ -1,0 +1,187 @@
+@import "../style/color.scss";
+.Login {
+  width: 100% !important;
+  max-width: inherit;
+
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    display: none;
+  }
+  .cursor_style {
+    cursor: pointer;
+  }
+
+  .leftside_style {
+    width: 60%;
+    background-color: $login_bg;
+    border-radius: 5px;
+    min-height: 93vh;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img_padding {
+    width: 70%;
+  }
+  .item_center {
+    align-items: center;
+  }
+
+  .rightside_style {
+    min-width: 37%;
+    background-color: $login_bg;
+    border-radius: 5px;
+    min-height: 93vh;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header {
+    font: normal normal bold 27px/30px Outfit;
+    color: $red;
+    opacity: 1;
+    margin-top: 5%;
+  }
+  .text-style {
+    font: normal normal normal 18px/27px Outfit;
+    letter-spacing: 0px;
+    color: $Black;
+    opacity: 1;
+  }
+  .input-label {
+    font: normal normal normal 14px/21px Outfit;
+    padding-bottom: 10px;
+    letter-spacing: 0px;
+    color: $Black;
+  }
+  .f-label {
+    font: normal normal 600 14px/21px Outfit;
+    position: relative;
+    color: $red;
+    cursor: pointer;
+  }
+  .manage-button {
+    border: 1px solid $Light-Gray;
+    border-radius: 5px;
+    // min-width: 80%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font: normal normal bold 16px/20px Outfit;
+    letter-spacing: 0px;
+    color: $White;
+    background-color: $red;
+  }
+  //   .img1 {
+  //     background-image: url('../../images/login/emailID.svg');
+  //     background-repeat: no-repeat;
+  //     background-position-x: 95%;
+  //     background-position-y: 8px;
+  //     // background-size: 5%;
+  //   }
+    .img2 {
+      background-image: url('../images/passwordHide.svg');
+      background-repeat: no-repeat;
+      background-position-x: 95%;
+      background-position-y: 10px;
+      // background-size: 22px;
+    }
+  .manage-inputs {
+    border: 1px solid $Light-Gray;
+    border-radius: 5px;
+    font-family: Outfit;
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+
+    min-width: 100%;
+    color: $Black;
+
+    // height: 50px;
+    // padding-left: 20px;
+    // padding-right: 50px;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  .input-label {
+    font: normal normal normal 14px/21px Outfit;
+    padding-bottom: 10px;
+    letter-spacing: 0px;
+    color: $Black;
+  }
+  .content_style {
+    // padding-top: 15%;
+    width: 80%;
+  }
+  // .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  //     width: 100% !important;
+  //     padding-right: var(--bs-gutter-x,.75rem);
+  //     padding-left: var(--bs-gutter-x,.75rem);
+  //     margin-right: auto;
+  //     margin-left: auto;
+  // }
+  @media screen and (max-width: 768px) {
+    .leftside_style {
+      display: none;
+    }
+    .rightside_style {
+      // flex-basis: 100%;
+      // height: 100%;
+      justify-content: center;
+
+      // width: 37%;
+      background-color: #f8f8f8;
+      border-radius: 0px;
+      min-height: 100vh;
+      height: auto !important;
+      // border-radius: 20px;
+      margin-top: 0%;
+      margin-left: 0%;
+      margin-right: 31%;
+    }
+
+    .rightside_style {
+      .ps-5 {
+        padding-left: 1rem !important;
+      }
+      .pe-5 {
+        padding-right: 1rem !important;
+      }
+    }
+    .mresp {
+      padding-right: 2%;
+    }
+  }
+  @media screen and (width: 768px) {
+    .rightside_style {
+      .ps-5 {
+        padding-left: 5rem !important;
+      }
+      .pe-5 {
+        padding-right: 5rem !important;
+      }
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 768) {
+    // padding-right: 4px !important;
+    .rightside_style {
+      // width: 37%;
+      background-color: #f8f8f8;
+      border-radius: 5px;
+      min-height: 100vh;
+      height: auto !important;
+      border-radius: 20px;
+      margin-top: 0%;
+      margin-left: 0%;
+      margin-right: 31%;
+    }
+  }
+}

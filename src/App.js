@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ROUTE_PATH } from './component/constants/Routes';
+import Login from './component/pages/Login';
+import Userdetails from './component/pages/UserDetails';
+import { Provider } from 'react-redux';
+import { Store } from './component/utils/Store/store';
+import UpdateUser from './component/pages/UpdateUser';
+import ProtectedRoute from './component/layout/PrivateRouter/privateRouter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={Store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path={ROUTE_PATH.LOGIN} element={<Login />} />
+          <Route
+            path={ROUTE_PATH.DETAILS}
+            element={<ProtectedRoute><Userdetails /></ProtectedRoute>}
+          />
+          <Route
+            path={ROUTE_PATH.UPDATE_USER}
+            element={<ProtectedRoute><UpdateUser /></ProtectedRoute>}
+          />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
